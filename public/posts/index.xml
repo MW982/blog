@@ -1,0 +1,97 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on MWBlog</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on MWBlog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 03 Mar 2026 21:37:00 +0000</lastBuildDate>
+        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Over the wire - Natas0</title>
+            <link>http://localhost:1313/posts/natas0/</link>
+            <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas0/</guid>
+            <description>Natas 0
+Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world. I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</description>
+            <content type="html"><![CDATA[<p>Natas 0</p>
+<p>Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world.
+I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas.
+Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</p>
+<p>Note: I will not be documenting the passwords for the levels. I will only be documenting the steps I took to solve the level as that is recommended by the wargame creators.</p>
+<p>natas0</p>
+<p>Just to spice things up a bit, I decided to only use curl to fetch the websites rather than just use the browser. This way you can use all that Unix/Linux knowledge to grep the password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas0:natas0 http://natas0.natas.labs.overthewire.org 
+</span></span></code></pre></div><p>By looking at the HTML source code you can easily find the password for the next level - natas1.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Over the wire - Natas1</title>
+            <link>http://localhost:1313/posts/natas1/</link>
+            <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas1/</guid>
+            <description>Natas1
+Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.
+More curling (and a little bit of linux basic spells to get the password -&amp;gt; I store the password in a file called natas1 and cat it to the curl command)
+curl --user natas1:$(cat natas1) http://natas1.natas.labs.overthewire.org Once again, the password is in the HTML source code.</description>
+            <content type="html"><![CDATA[<p>Natas1</p>
+<p>Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.</p>
+<p>More curling (and a little bit of linux basic spells to get the password -&gt; I store the password in a file called natas1 and cat it to the curl command)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas1:<span style="color:#66d9ef">$(</span>cat natas1<span style="color:#66d9ef">)</span> http://natas1.natas.labs.overthewire.org
+</span></span></code></pre></div><p>Once again, the password is in the HTML source code. Easy peasy.</p>
+<p>Just to practice the sed command, I decided to use it to save the password to a file called natas2.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas1:<span style="color:#66d9ef">$(</span>cat natas1<span style="color:#66d9ef">)</span>  http://natas1.natas.labs.overthewire.org | grep <span style="color:#e6db74">&#34;natas2&#34;</span> | sed <span style="color:#e6db74">&#39;s/.*is //&#39;</span> | sed <span style="color:#e6db74">&#39;s/ -*.//&#39;</span> &gt; natas2
+</span></span></code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Over the wire - Natas2</title>
+            <link>http://localhost:1313/posts/natas2/</link>
+            <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas2/</guid>
+            <description>Natas2
+That was the first one where it didn&amp;rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end. Then I though files/ is there anything else in that directory that could be useful? Yup, I found users.txt file with usernames:passwords and here was natas3.</description>
+            <content type="html"><![CDATA[<p>Natas2</p>
+<p>That was the first one where it didn&rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
+Then I though files/ is there anything else in that directory that could be useful?  Yup, I found users.txt file with usernames:passwords and here was natas3.</p>
+<p>Once again, easy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2<span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Saving natas3 to a file</span>
+</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files/users.txt | grep <span style="color:#e6db74">&#34;natas3&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas3
+</span></span></code></pre></div><p>Users.txt didn&rsquo;t contain only the natas3 password, but it also contained other usernames &amp; passwords. I tried to use those other credentials to access the natas2 website, but that didn&rsquo;t work :c
+Here you can see my attempt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files/users.txt | grep -v <span style="color:#e6db74">&#34;#&#34;</span> | <span style="color:#66d9ef">while</span> IFS<span style="color:#f92672">=</span>: read -r user pass; <span style="color:#66d9ef">do</span> curl --user <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">:</span>$pass<span style="color:#e6db74">&#34;</span> http://natas2.natas.labs.overthewire.org &gt;&gt; hmm ;  <span style="color:#66d9ef">done</span>
+</span></span></code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Over the wire - Natas3</title>
+            <link>http://localhost:1313/posts/natas3/</link>
+            <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas3/</guid>
+            <description>Natas3
+The hint was :
+I completely randomly tried to check the robots.txt file&amp;hellip;
+curl --user natas3:$(cat natas3) http://natas3.natas.labs.overthewire.org/robots.txt There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;
+curl --user natas3:$(cat natas3 ) http://natas3.</description>
+            <content type="html"><![CDATA[<p>Natas3</p>
+<p>The hint was :</p>
+<!-- raw HTML omitted -->
+<p>I completely randomly tried to check the robots.txt file&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3<span style="color:#66d9ef">)</span>  http://natas3.natas.labs.overthewire.org/robots.txt
+</span></span></code></pre></div><p>There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4.
+In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3 <span style="color:#66d9ef">)</span>  http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt  | grep <span style="color:#e6db74">&#34;natas4&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas4
+</span></span></code></pre></div>]]></content>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Untagged on MWBlog</title>
+    <link>http://localhost:1313/tags/untagged/</link>
+    <description>Recent content in Untagged on MWBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Mar 2026 21:37:42 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Over the wire - Natas</title>
+      <link>http://localhost:1313/posts/tmp_tmp/</link>
+      <pubDate>Tue, 03 Mar 2026 21:37:42 +0100</pubDate>
+      <guid>http://localhost:1313/posts/tmp_tmp/</guid>
+      <description>Natas 0&#xA;Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world. I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</description>
+    </item>
+  </channel>
+</rss>
