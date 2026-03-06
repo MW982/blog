@@ -10,10 +10,31 @@
     <atom:link href="http://localhost:1313/tags/over-the-wire/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Over the wire - Natas0</title>
-      <link>http://localhost:1313/posts/tmp_tmp/</link>
+      <link>http://localhost:1313/posts/natas0/</link>
       <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/tmp_tmp/</guid>
+      <guid>http://localhost:1313/posts/natas0/</guid>
       <description>Natas 0&#xA;Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world. I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</description>
+    </item>
+    <item>
+      <title>Over the wire - Natas1</title>
+      <link>http://localhost:1313/posts/natas1/</link>
+      <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas1/</guid>
+      <description>Natas1&#xA;Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.&#xA;More curling (and a little bit of linux basic spells to get the password -&amp;gt; I store the password in a file called natas1 and cat it to the curl command)&#xA;URL=http://natas1.natas.labs.overthewire.org curl --user natas1:$(cat natas1) $URL Once again, the password is in the HTML source code.</description>
+    </item>
+    <item>
+      <title>Over the wire - Natas2</title>
+      <link>http://localhost:1313/posts/natas2/</link>
+      <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas2/</guid>
+      <description>Natas2&#xA;That was the first one where it didn&amp;rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end. Then I though files/ is there anything else in that directory that could be useful? Yup, I found users.txt file with usernames:passwords and here was natas3.</description>
+    </item>
+    <item>
+      <title>Over the wire - Natas3</title>
+      <link>http://localhost:1313/posts/natas3/</link>
+      <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas3/</guid>
+      <description>Natas3&#xA;The hint was :&#xA;I completely randomly tried to check the robots.txt file&amp;hellip;&#xA;URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&amp;#34;/robots.txt&amp;#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;&#xA;curl --user natas3:$(cat natas3 ) $URL&amp;#34;/s3cr3t/users.</description>
     </item>
   </channel>
 </rss>

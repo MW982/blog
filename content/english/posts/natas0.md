@@ -21,13 +21,14 @@ Natas is about another topic of interest to me - web security. I will document m
 
 Note: I will not be documenting the passwords for the levels. I will only be documenting the steps I took to solve the level as that is recommended by the wargame creators.
 
-natas0
 
 Just to spice things up a bit, I decided to only use curl to fetch the websites rather than just use the browser. This way you can use all that Unix/Linux knowledge to grep the password.
 
 
 ```bash
-curl --user natas0:natas0 http://natas0.natas.labs.overthewire.org 
+URL=http://natas0.natas.labs.overthewire.org
+
+curl --user natas0:natas0 $URL
 ```
 
 By looking at the HTML source code you can easily find the password for the next level - natas1.

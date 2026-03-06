@@ -19,7 +19,9 @@ Well right clicking has been blocked on this level. What can I do !? Oh wait, I 
 
 More curling (and a little bit of linux basic spells to get the password -> I store the password in a file called natas1 and cat it to the curl command)
 ```bash
-curl --user natas1:$(cat natas1) http://natas1.natas.labs.overthewire.org
+URL=http://natas1.natas.labs.overthewire.org
+
+curl --user natas1:$(cat natas1) $URL 
 ```
 
 Once again, the password is in the HTML source code. Easy peasy.
@@ -27,5 +29,6 @@ Once again, the password is in the HTML source code. Easy peasy.
 Just to practice the sed command, I decided to use it to save the password to a file called natas2. 
 
 ```bash
-curl --user natas1:$(cat natas1)  http://natas1.natas.labs.overthewire.org | grep "natas2" | sed 's/.*is //' | sed 's/ -*.//' > natas2
+curl --user natas1:$(cat natas1) $URL | 
+grep "natas2" | sed 's/.*is //' | sed 's/ -*.//' > natas2
 ```

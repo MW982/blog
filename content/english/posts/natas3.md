@@ -20,7 +20,9 @@ The hint was :
 I completely randomly tried to check the robots.txt file... 
 
 ```bash
-curl --user natas3:$(cat natas3)  http://natas3.natas.labs.overthewire.org/robots.txt
+URL=http://natas3.natas.labs.overthewire.org
+
+curl --user natas3:$(cat natas3) $URL"/robots.txt"
 ```
 
 There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4.
@@ -28,7 +30,8 @@ In the hindsight I get it "Not even Google" web crawlers will find it. Robots.tx
 
 
 ```bash
-curl --user natas3:$(cat natas3 )  http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt  | grep "natas4" | sed "s/.*://" > natas4
+curl --user natas3:$(cat natas3 ) $URL"/s3cr3t/users.txt" | 
+grep "natas4" | sed "s/.*://" > natas4
 ```
 
 

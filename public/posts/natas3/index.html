@@ -9,8 +9,8 @@
 <meta name="description" content="Natas3
 The hint was :
 I completely randomly tried to check the robots.txt file&amp;hellip;
-curl --user natas3:$(cat natas3) http://natas3.natas.labs.overthewire.org/robots.txt There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;
-curl --user natas3:$(cat natas3 ) http://natas3." />
+URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&amp;#34;/robots.txt&amp;#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;
+curl --user natas3:$(cat natas3 ) $URL&amp;#34;/s3cr3t/users." />
 <meta name="keywords" content=", Over the wire, Natas, Curl, Linux, Web Security" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -46,17 +46,17 @@ curl --user natas3:$(cat natas3 ) http://natas3." />
 <meta itemprop="description" content="Natas3
 The hint was :
 I completely randomly tried to check the robots.txt file&hellip;
-curl --user natas3:$(cat natas3) http://natas3.natas.labs.overthewire.org/robots.txt There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
-curl --user natas3:$(cat natas3 ) http://natas3."><meta itemprop="datePublished" content="2026-03-03T21:37:00+00:00" />
+URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&#34;/robots.txt&#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
+curl --user natas3:$(cat natas3 ) $URL&#34;/s3cr3t/users."><meta itemprop="datePublished" content="2026-03-03T21:37:00+00:00" />
 <meta itemprop="dateModified" content="2026-03-03T21:37:00+00:00" />
-<meta itemprop="wordCount" content="80">
+<meta itemprop="wordCount" content="81">
 <meta itemprop="keywords" content="Over the wire,Natas,Curl,Linux,Web Security," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Over the wire - Natas3"/>
 <meta name="twitter:description" content="Natas3
 The hint was :
 I completely randomly tried to check the robots.txt file&hellip;
-curl --user natas3:$(cat natas3) http://natas3.natas.labs.overthewire.org/robots.txt There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
-curl --user natas3:$(cat natas3 ) http://natas3."/>
+URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&#34;/robots.txt&#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
+curl --user natas3:$(cat natas3 ) $URL&#34;/s3cr3t/users."/>
 
 
 
@@ -64,8 +64,8 @@ curl --user natas3:$(cat natas3 ) http://natas3."/>
 <meta property="og:description" content="Natas3
 The hint was :
 I completely randomly tried to check the robots.txt file&hellip;
-curl --user natas3:$(cat natas3) http://natas3.natas.labs.overthewire.org/robots.txt There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
-curl --user natas3:$(cat natas3 ) http://natas3." />
+URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&#34;/robots.txt&#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;
+curl --user natas3:$(cat natas3 ) $URL&#34;/s3cr3t/users." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/natas3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2026-03-03T21:37:00+00:00" />
@@ -162,10 +162,13 @@ curl --user natas3:$(cat natas3 ) http://natas3." />
 <p>The hint was :</p>
 <!-- raw HTML omitted -->
 <p>I completely randomly tried to check the robots.txt file&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3<span style="color:#66d9ef">)</span>  http://natas3.natas.labs.overthewire.org/robots.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas3.natas.labs.overthewire.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3<span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/robots.txt&#34;</span>
 </span></span></code></pre></div><p>There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4.
 In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3 <span style="color:#66d9ef">)</span>  http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt  | grep <span style="color:#e6db74">&#34;natas4&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas4
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas3:<span style="color:#66d9ef">$(</span>cat natas3 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/s3cr3t/users.txt&#34;</span> | 
+</span></span><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;natas4&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas4
 </span></span></code></pre></div>
         </div>
       </article>
@@ -195,7 +198,7 @@ In the hindsight I get it &ldquo;Not even Google&rdquo; web crawlers will find i
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          80 Words
+          81 Words
         </p>
 
         <p>

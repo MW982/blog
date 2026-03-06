@@ -151,9 +151,10 @@ Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux bas
 I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas.
 Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</p>
 <p>Note: I will not be documenting the passwords for the levels. I will only be documenting the steps I took to solve the level as that is recommended by the wargame creators.</p>
-<p>natas0</p>
 <p>Just to spice things up a bit, I decided to only use curl to fetch the websites rather than just use the browser. This way you can use all that Unix/Linux knowledge to grep the password.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas0:natas0 http://natas0.natas.labs.overthewire.org 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas0.natas.labs.overthewire.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user natas0:natas0 $URL
 </span></span></code></pre></div><p>By looking at the HTML source code you can easily find the password for the next level - natas1.</p>
 
         </div>

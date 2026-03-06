@@ -19,11 +19,13 @@ Then I though files/ is there anything else in that directory that could be usef
 
 Once again, easy. 
 ```bash
+URL=http://natas2.natas.labs.overthewire.org
 
-curl --user natas2:$(cat natas2)  http://natas2.natas.labs.overthewire.org/files
+curl --user natas2:$(cat natas2) $URL 
 
 # Saving natas3 to a file
-curl --user natas2:$(cat natas2 )  http://natas2.natas.labs.overthewire.org/files/users.txt | grep "natas3" | sed "s/.*://" > natas3
+curl --user natas2:$(cat natas2 ) $URL"/files/users.txt" |
+grep "natas3" | sed "s/.*://" > natas3
 
 ```
 
@@ -32,7 +34,11 @@ Users.txt didn't contain only the natas3 password, but it also contained other u
 Here you can see my attempt:
 
 ```bash
-curl --user natas2:$(cat natas2 )  http://natas2.natas.labs.overthewire.org/files/users.txt | grep -v "#" | while IFS=: read -r user pass; do curl --user "$user:$pass" http://natas2.natas.labs.overthewire.org >> hmm ;  done
+curl --user natas2:$(cat natas2 ) $URL"/files/users.txt" | 
+grep -v "#" | 
+while IFS=: read -r user pass; do 
+  curl --user "$user:$pass" $URL >> hmm_file 
+done
 ```
 
 

