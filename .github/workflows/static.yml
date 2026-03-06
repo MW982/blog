@@ -28,3 +28,4 @@ jobs:
           external_repository: MW982/mw982.github.io
           publish_branch: main
           publish_dir: ./public
+          cname: blog.maksw.eu
