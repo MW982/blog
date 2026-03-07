@@ -1,4 +1,4 @@
-baseURL = 'https://blog.maksw.eu/'
+baseURL = 'https://www.blog.maksw.eu/'
 languageCode = 'en-us'
 title = 'MWBlog'
 theme = 'hello-friend-ng'
