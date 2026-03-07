@@ -12,10 +12,7 @@ tags:
   - Web Security
 ---
 
-Natas1
-
 Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.
-
 
 More curling (and a little bit of linux basic spells to get the password -> I store the password in a file called natas1 and cat it to the curl command)
 ```bash

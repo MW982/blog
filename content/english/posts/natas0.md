@@ -13,8 +13,6 @@ tags:
 ---
 
 
-Natas 0
-
 Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world.
 I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. 
 Natas is about another topic of interest to me - web security. I will document my journey through this wargame.

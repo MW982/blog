@@ -12,7 +12,6 @@ tags:
   - Web Security
 ---
 
-Natas2
 
 That was the first one where it didn't get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
 Then I though files/ is there anything else in that directory that could be useful?  Yup, I found users.txt file with usernames:passwords and here was natas3. 
