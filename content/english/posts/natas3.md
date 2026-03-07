@@ -12,8 +12,6 @@ tags:
   - Web Security
 ---
 
-Natas3
-
 The hint was :
 <!-- No more information leaks!! Not even Google will find it this time... -->
 
