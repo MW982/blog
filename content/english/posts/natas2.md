@@ -13,8 +13,11 @@ tags:
 ---
 
 
-That was the first one where it didn't get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
-Then I though files/ is there anything else in that directory that could be useful?  Yup, I found users.txt file with usernames:passwords and here was natas3. 
+That was the first natas wargame where it didn't get solved in the first second. 
+I noticed that body contained an image **/files/pixel.png**. At first I tried **file** / **strings** / **xxd** commands to find the password hidden in the image, but that led me to a dead end.
+Then I thought files/ is there anything else in that directory that could be useful?  
+
+Yup, I found users.txt file with usernames:passwords and here was natas3. 
 
 Once again, easy. 
 ```bash
@@ -27,9 +30,12 @@ curl --user natas2:$(cat natas2 ) $URL"/files/users.txt" |
 grep "natas3" | sed "s/.*://" > natas3
 
 ```
+## Additional fun 
+---
 
+Users.txt didn't contain only the natas3 password, but it also contained other usernames & passwords.
 
-Users.txt didn't contain only the natas3 password, but it also contained other usernames & passwords. I tried to use those other credentials to access the natas2 website, but that didn't work :c 
+I tried to use those other credentials to access the natas2 website, but that didn't work :c 
 Here you can see my attempt:
 
 ```bash

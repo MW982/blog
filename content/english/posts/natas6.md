@@ -1,6 +1,6 @@
 ---
 title: "Over the wire - Natas6"
-date: 2026-03-03T21:37:00+00:00
+date: 2026-03-04T21:37:03+00:00
 draft: false 
 toc: false
 images:
@@ -30,7 +30,6 @@ Curl the website, found weird <a> tag, curl that
 ```
 
 ```bash
-
 curl --user  natas6:$(cat natas6 ) $URL/index-source.html
 ```
 

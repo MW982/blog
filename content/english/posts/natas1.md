@@ -12,19 +12,21 @@ tags:
   - Web Security
 ---
 
-Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.
+Well right clicking has been blocked on this level. **What can I do !?**
 
-More curling (and a little bit of linux basic spells to get the password -> I store the password in a file called natas1 and cat it to the curl command)
+**Note**: I will save the passwords in a file called **natasX** where **X** is the level number and will start every level by defining a URL variable.
+
+Oh wait, I was using curl to begin with another easy level.
+
 ```bash
 URL=http://natas1.natas.labs.overthewire.org
 
 curl --user natas1:$(cat natas1) $URL 
 ```
 
-Once again, the password is in the HTML source code. Easy peasy.
+Once again, the password is easliy found in the HTML. Easy peasy.
 
-Just to practice the sed command, I decided to use it to save the password to a file called natas2. 
-
+More curling (and a little bit of linux basic spells to get the password -> I store the password in a file called natas1 and cat it to the curl command)
 ```bash
 curl --user natas1:$(cat natas1) $URL | 
 grep "natas2" | sed 's/.*is //' | sed 's/ -*.//' > natas2

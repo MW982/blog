@@ -98,13 +98,13 @@ theme = 'hello-friend-ng'
 #   # generate the buttons here: https://sharingbuttons.io
 #   # and add them into your own `layouts/partials/sharing-buttons.html`
 #   #
-#   enableSharingButtons = true
+  enableSharingButtons = true
 #
 #   # Reading time
 #   #
 #   # This option enables reading time part on post info
 #   #
-#   enableReadingTime = true
+#   # enableReadingTime = true
 #
 #   # Global language menu
 #   #
