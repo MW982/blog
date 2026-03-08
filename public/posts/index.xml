@@ -14,10 +14,8 @@
             <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
             
             <guid>http://localhost:1313/posts/natas0/</guid>
-            <description>Natas 0
-Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world. I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</description>
-            <content type="html"><![CDATA[<p>Natas 0</p>
-<p>Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world.
+            <description>Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world. I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas. Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</description>
+            <content type="html"><![CDATA[<p>Lately I finished the Over the wire - Bandit wargame. It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world.
 I still taught me a few things about the Linux system and the basics of the shell. That inspired me to play another wargame - Natas.
 Natas is about another topic of interest to me - web security. I will document my journey through this wargame.</p>
 <p>Note: I will not be documenting the passwords for the levels. I will only be documenting the steps I took to solve the level as that is recommended by the wargame creators.</p>
@@ -35,12 +33,10 @@ Natas is about another topic of interest to me - web security. I will document m
             <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
             
             <guid>http://localhost:1313/posts/natas1/</guid>
-            <description>Natas1
-Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.
+            <description>Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.
 More curling (and a little bit of linux basic spells to get the password -&amp;gt; I store the password in a file called natas1 and cat it to the curl command)
 URL=http://natas1.natas.labs.overthewire.org curl --user natas1:$(cat natas1) $URL Once again, the password is in the HTML source code.</description>
-            <content type="html"><![CDATA[<p>Natas1</p>
-<p>Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.</p>
+            <content type="html"><![CDATA[<p>Well right clicking has been blocked on this level. What can I do !? Oh wait, I was using curl to begin with another easy level.</p>
 <p>More curling (and a little bit of linux basic spells to get the password -&gt; I store the password in a file called natas1 and cat it to the curl command)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas1.natas.labs.overthewire.org
 </span></span><span style="display:flex;"><span>
@@ -58,10 +54,8 @@ URL=http://natas1.natas.labs.overthewire.org curl --user natas1:$(cat natas1) $U
             <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
             
             <guid>http://localhost:1313/posts/natas2/</guid>
-            <description>Natas2
-That was the first one where it didn&amp;rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end. Then I though files/ is there anything else in that directory that could be useful? Yup, I found users.txt file with usernames:passwords and here was natas3.</description>
-            <content type="html"><![CDATA[<p>Natas2</p>
-<p>That was the first one where it didn&rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
+            <description>That was the first one where it didn&amp;rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end. Then I though files/ is there anything else in that directory that could be useful? Yup, I found users.txt file with usernames:passwords and here was natas3.</description>
+            <content type="html"><![CDATA[<p>That was the first one where it didn&rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end.
 Then I though files/ is there anything else in that directory that could be useful?  Yup, I found users.txt file with usernames:passwords and here was natas3.</p>
 <p>Once again, easy.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas2.natas.labs.overthewire.org
@@ -87,13 +81,11 @@ Here you can see my attempt:</p>
             <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
             
             <guid>http://localhost:1313/posts/natas3/</guid>
-            <description>Natas3
-The hint was :
+            <description>The hint was :
 I completely randomly tried to check the robots.txt file&amp;hellip;
 URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&amp;#34;/robots.txt&amp;#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;
 curl --user natas3:$(cat natas3 ) $URL&amp;#34;/s3cr3t/users.</description>
-            <content type="html"><![CDATA[<p>Natas3</p>
-<p>The hint was :</p>
+            <content type="html"><![CDATA[<p>The hint was :</p>
 <!-- raw HTML omitted -->
 <p>I completely randomly tried to check the robots.txt file&hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas3.natas.labs.overthewire.org

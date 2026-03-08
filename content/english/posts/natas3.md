@@ -1,6 +1,6 @@
 ---
 title: "Over the wire - Natas3"
-date: 2026-03-03T21:37:00+00:00
+date: 2026-03-04T21:37:00+00:00
 draft: false 
 toc: false
 images:
@@ -12,8 +12,10 @@ tags:
   - Web Security
 ---
 
-The hint was :
+The hint:
+```html
 <!-- No more information leaks!! Not even Google will find it this time... -->
+```
 
 I completely randomly tried to check the robots.txt file... 
 
