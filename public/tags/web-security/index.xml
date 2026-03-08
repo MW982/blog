@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web Security on MWBlog</title>
+    <title>Web Security on Maksymilian Więckowski</title>
     <link>http://localhost:1313/tags/web-security/</link>
-    <description>Recent content in Web Security on MWBlog</description>
+    <description>Recent content in Web Security on Maksymilian Więckowski</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Mar 2026 21:37:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2026 21:37:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Over the wire - Natas3</title>
+      <link>http://localhost:1313/posts/natas3/</link>
+      <pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas3/</guid>
+      <description>The hint:&#xA;&amp;lt;!-- No more information leaks!! Not even Google will find it this time... --&amp;gt; I completely randomly tried to check the robots.txt file&amp;hellip;&#xA;URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&amp;#34;/robots.txt&amp;#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;</description>
+    </item>
+    <item>
+      <title>Over the wire - Natas5</title>
+      <link>http://localhost:1313/posts/natas5/</link>
+      <pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas5/</guid>
+      <description>Natas5&#xA;The hint indicated that it was about authentication. It said that I wasn&amp;rsquo;t logged in. Two things instatnly come to mind when I hear the word authentication.&#xA;JWT - Json Web token - stateless way of authentication. The Server/Client flow goes like this: Client logs in with credentials Server verifies credentials against the DB Server generates a JWT using header + payload + signature (signed with secret key). JWT is a base64 encoded string, so anyone can decode it, but it is signed so no one can tamper with it.</description>
+    </item>
     <item>
       <title>Over the wire - Natas0</title>
       <link>http://localhost:1313/posts/natas0/</link>
@@ -30,11 +44,18 @@
       <description>That was the first one where it didn&amp;rsquo;t get solved in the first second. I noticed that body contained an image /files/pixel.png. At first I tried file / strings / xxd to find the password hidden in the image, but that led me to a dead end. Then I though files/ is there anything else in that directory that could be useful? Yup, I found users.txt file with usernames:passwords and here was natas3.</description>
     </item>
     <item>
-      <title>Over the wire - Natas3</title>
-      <link>http://localhost:1313/posts/natas3/</link>
+      <title>Over the wire - Natas4</title>
+      <link>http://localhost:1313/posts/natas4/</link>
       <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/natas3/</guid>
-      <description>The hint was :&#xA;I completely randomly tried to check the robots.txt file&amp;hellip;&#xA;URL=http://natas3.natas.labs.overthewire.org curl --user natas3:$(cat natas3) $URL&amp;#34;/robots.txt&amp;#34; There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4. In the hindsight I get it &amp;ldquo;Not even Google&amp;rdquo; web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not&amp;hellip;&#xA;curl --user natas3:$(cat natas3 ) $URL&amp;#34;/s3cr3t/users.</description>
+      <guid>http://localhost:1313/posts/natas4/</guid>
+      <description>First one where I had to use the browser to investigate.&#xA;URL=http://natas4.natas.labs.overthewire.org curl --user natas4:$(cat natas4 ) $URL I got a message saying that:&#xA;Access disallowed. You are visiting from &amp;#34;&amp;#34; while authorized users should come only from &amp;#34;http://natas5.natas.labs.overthewire.org/&amp;#34; &amp;lt;br/&amp;gt; &amp;lt;div id=&amp;#34;viewsource&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;index.php&amp;#34;&amp;gt;Refresh page&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; I was wondering what that Refresh page was about. After clicking on the link, I got a message saying that:&#xA;Access disallowed. You are visiting from &amp;#34;http://natas4.</description>
+    </item>
+    <item>
+      <title>Over the wire - Natas6</title>
+      <link>http://localhost:1313/posts/natas6/</link>
+      <pubDate>Tue, 03 Mar 2026 21:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas6/</guid>
+      <description>You know the drill.&#xA;URL=http://natas6.natas.labs.overthewire.org curl --user natas6:$(cat natas6 ) $URL Curl the website, found weird tag, curl that&#xA;&amp;lt;div id=&amp;#34;viewsource&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;index-source.html&amp;#34;&amp;gt;View sourcecode&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; curl --user natas6:$(cat natas6 ) $URL/index-source.html As you can see this is barely readable, but a quick glance and I see &amp;lsquo;includes/secret.inc&amp;rsquo;. There goes another curl.&#xA;&amp;lt;code&amp;gt;&amp;lt;span style=&amp;#34;color: #000000&amp;#34;&amp;gt; &amp;amp;lt;html&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;head&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;!--&amp;amp;nbsp;This&amp;amp;nbsp;stuff&amp;amp;nbsp;in&amp;amp;nbsp;the&amp;amp;nbsp;header&amp;amp;nbsp;has&amp;amp;nbsp;nothing&amp;amp;nbsp;to&amp;amp;nbsp;do&amp;amp;nbsp;with&amp;amp;nbsp;the&amp;amp;nbsp;level&amp;amp;nbsp;--&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;link&amp;amp;nbsp;rel=&amp;#34;stylesheet&amp;#34;&amp;amp;nbsp;type=&amp;#34;text/css&amp;#34;&amp;amp;nbsp;href=&amp;#34;http://natas.labs.overthewire.org/css/level.css&amp;#34;&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;link&amp;amp;nbsp;rel=&amp;#34;stylesheet&amp;#34;&amp;amp;nbsp;href=&amp;#34;http://natas.labs.overthewire.org/css/jquery-ui.css&amp;#34;&amp;amp;nbsp;/&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;link&amp;amp;nbsp;rel=&amp;#34;stylesheet&amp;#34;&amp;amp;nbsp;href=&amp;#34;http://natas.labs.overthewire.org/css/wechall.css&amp;#34;&amp;amp;nbsp;/&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;script&amp;amp;nbsp;src=&amp;#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&amp;#34;&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;script&amp;amp;nbsp;src=&amp;#34;http://natas.labs.overthewire.org/js/jquery-ui.js&amp;#34;&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;script&amp;amp;nbsp;src=http://natas.labs.overthewire.org/js/wechall-data.js&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;amp;lt;script&amp;amp;nbsp;src=&amp;#34;http://natas.labs.overthewire.org/js/wechall.js&amp;#34;&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;script&amp;amp;gt;var&amp;amp;nbsp;wechallinfo&amp;amp;nbsp;=&amp;amp;nbsp;{&amp;amp;nbsp;&amp;#34;level&amp;#34;:&amp;amp;nbsp;&amp;#34;natas6&amp;#34;,&amp;amp;nbsp;&amp;#34;pass&amp;#34;:&amp;amp;nbsp;&amp;#34;&amp;amp;lt;censored&amp;amp;gt;&amp;#34;&amp;amp;nbsp;};&amp;amp;lt;/script&amp;amp;gt;&amp;amp;lt;/head&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;body&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;h1&amp;amp;gt;natas6&amp;amp;lt;/h1&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;amp;lt;div&amp;amp;nbsp;id=&amp;#34;content&amp;#34;&amp;amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;span style=&amp;#34;color: #0000BB&amp;#34;&amp;gt;&amp;amp;lt;?&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color: #007700&amp;#34;&amp;gt;include&amp;amp;nbsp;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color: #DD0000&amp;#34;&amp;gt;&amp;#34;includes/secret.</description>
     </item>
   </channel>
 </rss>
