@@ -12,8 +12,6 @@ tags:
   - Web Security
 ---
 
-
-
 You know the drill. 
 
 
