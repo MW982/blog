@@ -28,7 +28,7 @@ We get a form & index-source.html. Let's check what's up with the index-source.h
 curl --user  natas8:$(cat natas8 ) $URL"/index-source.html" > index-source.html
 ```
 
-I open the file in neovim and all I get a mess with a bunch of \&nbsp; - white spaces and \&lt; \&gt; < and > signs.
+I opened the file in neovim and all I got was a mess with a bunch of \&nbsp; - white spaces and \&lt; \&gt; < and > signs.
 ```vim
 # Replace all &nbsp; with a space
 :%s/\&nbsp;/ /g
@@ -102,7 +102,7 @@ So I do the reverse:
 echo "3d3d516343746d4d6d6c315669563362" | xxd -r -p | rev | base64 -d
 ```
 
-I pass the secret to the form (and keep the streak of not using a web browser for this challange):
+I pass the secret to the form (and keep the streak of not using a web browser for this challenge):
 
 ![Attentive readers call my bs in the comments :c](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWNmbzd3YngyY2Y5ZjF4djB3a2dudndsajJtaWVrYmtqc3FoYmJ5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ELtfmA4Apkju/giphy.gif)
 

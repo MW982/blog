@@ -8,9 +8,9 @@
 <meta name="author" content="Maksymilian Więckowski ">
 <meta name="description" content="It goes like this:
 URL=http://natas8.natas.labs.overthewire.org curl --user natas8:$(cat natas8 ) $URL We get a form &amp;amp; index-source.html. Let&amp;rsquo;s check what&amp;rsquo;s up with the index-source.html:
-curl --user natas8:$(cat natas8 ) $URL&amp;#34;/index-source.html&amp;#34; &amp;gt; index-source.html I open the file in neovim and all I get a mess with a bunch of &amp;amp;nbsp; - white spaces and &amp;amp;lt; &amp;amp;gt; &amp;lt; and &amp;gt; signs.
+curl --user natas8:$(cat natas8 ) $URL&amp;#34;/index-source.html&amp;#34; &amp;gt; index-source.html I opened the file in neovim and all I got was a mess with a bunch of &amp;amp;nbsp; - white spaces and &amp;amp;lt; &amp;amp;gt; &amp;lt; and &amp;gt; signs.
 # Replace all &amp;amp;nbsp; with a space :%s/\&amp;amp;nbsp;/ /g # Replace all &amp;lt;br /&amp;gt; with a \r - carriage return -&amp;gt; newline :%s/&amp;lt;br \/&amp;gt;;/\r/g Exercise for a reader is to do the same for the &amp;lt; and &amp;gt; signs." />
-<meta name="keywords" content=", Over the wire, Natas, Curl, Linux, Web Security" />
+<meta name="keywords" content="python, programming, blog, overthewire, django, fastapi, linux, security, Over the wire, Natas, Curl, Linux, Web Security" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="http://localhost:1313/posts/natas8/" />
@@ -18,7 +18,7 @@ curl --user natas8:$(cat natas8 ) $URL&amp;#34;/index-source.html&amp;#34; &amp;
 
     <title>
         
-            Over the wire - Natas8 :: Maksymilian Więckowski 
+            Over the wire - Natas8 :: Maksymilian Więckowski - blog 
         
     </title>
 
@@ -44,15 +44,16 @@ curl --user natas8:$(cat natas8 ) $URL&amp;#34;/index-source.html&amp;#34; &amp;
 <meta itemprop="name" content="Over the wire - Natas8">
 <meta itemprop="description" content="It goes like this:
 URL=http://natas8.natas.labs.overthewire.org curl --user natas8:$(cat natas8 ) $URL We get a form &amp; index-source.html. Let&rsquo;s check what&rsquo;s up with the index-source.html:
-curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I open the file in neovim and all I get a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
+curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I opened the file in neovim and all I got was a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
 # Replace all &amp;nbsp; with a space :%s/\&amp;nbsp;/ /g # Replace all &lt;br /&gt; with a \r - carriage return -&gt; newline :%s/&lt;br \/&gt;;/\r/g Exercise for a reader is to do the same for the &lt; and &gt; signs."><meta itemprop="datePublished" content="2026-03-09T18:37:00+00:00" />
 <meta itemprop="dateModified" content="2026-03-09T18:37:00+00:00" />
-<meta itemprop="wordCount" content="374">
+<meta itemprop="wordCount" content="375"><meta itemprop="image" content="http://localhost:1313/" />
 <meta itemprop="keywords" content="Over the wire,Natas,Curl,Linux,Web Security," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Over the wire - Natas8"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/" /><meta name="twitter:title" content="Over the wire - Natas8"/>
 <meta name="twitter:description" content="It goes like this:
 URL=http://natas8.natas.labs.overthewire.org curl --user natas8:$(cat natas8 ) $URL We get a form &amp; index-source.html. Let&rsquo;s check what&rsquo;s up with the index-source.html:
-curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I open the file in neovim and all I get a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
+curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I opened the file in neovim and all I got was a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
 # Replace all &amp;nbsp; with a space :%s/\&amp;nbsp;/ /g # Replace all &lt;br /&gt; with a \r - carriage return -&gt; newline :%s/&lt;br \/&gt;;/\r/g Exercise for a reader is to do the same for the &lt; and &gt; signs."/>
 
 
@@ -60,10 +61,10 @@ curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-so
     <meta property="og:title" content="Over the wire - Natas8" />
 <meta property="og:description" content="It goes like this:
 URL=http://natas8.natas.labs.overthewire.org curl --user natas8:$(cat natas8 ) $URL We get a form &amp; index-source.html. Let&rsquo;s check what&rsquo;s up with the index-source.html:
-curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I open the file in neovim and all I get a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
+curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-source.html I opened the file in neovim and all I got was a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.
 # Replace all &amp;nbsp; with a space :%s/\&amp;nbsp;/ /g # Replace all &lt;br /&gt; with a \r - carriage return -&gt; newline :%s/&lt;br \/&gt;;/\r/g Exercise for a reader is to do the same for the &lt; and &gt; signs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/natas8/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/natas8/" /><meta property="og:image" content="http://localhost:1313/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2026-03-09T18:37:00+00:00" />
 <meta property="article:modified_time" content="2026-03-09T18:37:00+00:00" />
 
@@ -165,7 +166,7 @@ curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-so
 </span></span><span style="display:flex;"><span>curl --user  natas8:<span style="color:#66d9ef">$(</span>cat natas8 <span style="color:#66d9ef">)</span> $URL
 </span></span></code></pre></div><p>We get a form &amp; index-source.html. Let&rsquo;s check what&rsquo;s up with the index-source.html:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user  natas8:<span style="color:#66d9ef">$(</span>cat natas8 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/index-source.html&#34;</span> &gt; index-source.html
-</span></span></code></pre></div><p>I open the file in neovim and all I get a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.</p>
+</span></span></code></pre></div><p>I opened the file in neovim and all I got was a mess with a bunch of &amp;nbsp; - white spaces and &amp;lt; &amp;gt; &lt; and &gt; signs.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span># <span style="color:#a6e22e">Replace</span> <span style="color:#a6e22e">all</span> &amp;<span style="color:#a6e22e">nbsp</span>; <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">space</span>
 </span></span><span style="display:flex;"><span>:%<span style="color:#a6e22e">s</span><span style="color:#e6db74">/\&amp;nbsp;/</span> /<span style="color:#a6e22e">g</span>
 </span></span><span style="display:flex;"><span>
@@ -227,7 +228,7 @@ curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-so
 </ol>
 <p>So I do the reverse:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;3d3d516343746d4d6d6c315669563362&#34;</span> | xxd -r -p | rev | base64 -d
-</span></span></code></pre></div><p>I pass the secret to the form (and keep the streak of not using a web browser for this challange):</p>
+</span></span></code></pre></div><p>I pass the secret to the form (and keep the streak of not using a web browser for this challenge):</p>
 <p><img alt="Attentive readers call my bs in the comments :c" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWNmbzd3YngyY2Y5ZjF4djB3a2dudndsajJtaWVrYmtqc3FoYmJ5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ELtfmA4Apkju/giphy.gif"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user  natas8:<span style="color:#66d9ef">$(</span>cat natas8 <span style="color:#66d9ef">)</span> $URL -X POST -d <span style="color:#e6db74">&#34;secret=oubWYf2kBq&amp;submit=Submit+Query&#34;</span> | grep <span style="color:#e6db74">&#34;natas9 is&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*is //&#34;</span> &gt; natas9
 </span></span></code></pre></div>
@@ -259,7 +260,7 @@ curl --user natas8:$(cat natas8 ) $URL&#34;/index-source.html&#34; &gt; index-so
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          374 Words
+          375 Words
         </p>
 
         <p>

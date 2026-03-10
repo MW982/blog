@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Curl on Maksymilian Więckowski</title>
+    <title>Curl on Maksymilian Więckowski - blog</title>
     <link>http://localhost:1313/tags/curl/</link>
-    <description>Recent content in Curl on Maksymilian Więckowski</description>
+    <description>Recent content in Curl on Maksymilian Więckowski - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 09 Mar 2026 18:37:00 +0000</lastBuildDate>
@@ -20,7 +20,7 @@
       <link>http://localhost:1313/posts/natas7/</link>
       <pubDate>Sun, 08 Mar 2026 21:37:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/natas7/</guid>
-      <description>The starting point is as usual:&#xA;URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&amp;rsquo;ll need to do. I have 2 Home html tags and a About.&#xA;What it means that we can traverse the website via this index.php?page=xyz&#xA;We also get a hint:&#xA;&amp;lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&amp;gt; I check my theory:&#xA;curl --user natas7:$(cat natas7 ) $URL&amp;#34;/index.php?page=/etc/&amp;#34; And I get this:</description>
+      <description>The starting point is as usual:&#xA;URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&amp;rsquo;ll need to do. I have 2 &amp;lt;a href=&amp;quot;index.php?page=home&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; html tags and a &amp;lt;a href=&amp;quot;index.php?page=about&amp;quot;&amp;gt;About&amp;lt;/a&amp;gt;.&#xA;What it means that we can traverse the website via this index.php?page=xyz&#xA;We also get a hint:&#xA;&amp;lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&amp;gt; I check my theory:&#xA;curl --user natas7:$(cat natas7 ) $URL&amp;#34;/index.php?page=/etc/&amp;#34; And I get this:</description>
     </item>
     <item>
       <title>Over the wire - Natas6</title>

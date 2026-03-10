@@ -12,7 +12,7 @@ tags:
   - Web Security
 ---
 
-Well right clicking has been blocked on this level. **What can I do !?**
+Well, right-clicking has been blocked on this level. **What can I do !?**
 
 **Note**: I will save the passwords in a file called **natasX** where **X** is the level number and will start every level by defining a URL variable.
 
@@ -24,9 +24,9 @@ URL=http://natas1.natas.labs.overthewire.org
 curl --user natas1:$(cat natas1) $URL 
 ```
 
-Once again, the password is easliy found in the HTML. Easy peasy.
+Once again, the password is easily found in the HTML. Easy peasy.
 
-More curling (and a little bit of linux basic spells to get the password -> I store the password in a file called natas1 and cat it to the curl command)
+More curling (and a little bit of linux magic to get the password -> I store the password in a file called natas1 and cat it to the curl command)
 ```bash
 curl --user natas1:$(cat natas1) $URL | 
 grep "natas2" | sed 's/.*is //' | sed 's/ -*.//' > natas2

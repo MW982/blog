@@ -1,6 +1,6 @@
 baseURL = 'https://www.blog.maksw.eu/'
 languageCode = 'en-us'
-title = 'Maksymilian Więckowski'
+title = 'Maksymilian Więckowski - blog'
 theme = 'hello-friend-ng'
 
 
@@ -62,16 +62,16 @@ theme = 'hello-friend-ng'
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
-#
-#   # Metadata mostly used in document's head
-#   # 
-#   description = "Nice theme for homepages and blogs"
-#   keywords = ""
-#   images = [""]
-#
-#   # Home subtitle of the index page.
-#   #
-#   homeSubtitle = "Hello Friend NG"
+
+  # Metadata mostly used in document's head
+  # 
+  # description = "Nice theme for homepages and blogs"
+  keywords = "python, programming, blog, overthewire, django, fastapi, linux, security"
+  images = [""]
+
+  # Home subtitle of the index page.
+  #
+  homeSubtitle = "A python developer writing about all things programming"
 #
 #   # Set a background for the homepage
 #   # backgroundImage = "assets/images/background.jpg"

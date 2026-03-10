@@ -15,7 +15,7 @@ tags:
 
 Lately I finished the [Over the wire - Bandit](https://overthewire.org/wargames/bandit/) wargame.
 
-It teaches Unix/ Linux basics and although I dont think of myself as a beginner in the Linux world.
+It teaches Unix/ Linux basics and although I don't think of myself as a beginner in the Linux world.
 I still taught me a few new shell commands. That inspired me to play another wargame - [Natas](https://overthewire.org/wargames/natas/). 
 
 Natas is about another topic of interest to me - web security. I will document my journey through this wargame.

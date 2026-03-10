@@ -23,7 +23,7 @@ curl --user  natas7:$(cat natas7 ) $URL
 ```
 
 I immediately know what i'll need to do. 
-I have 2 **<a href="index.php?page=home">Home</a>** html tags and a **<a href="index.php?page=about">About</a>**.
+I have 2 ```<a href="index.php?page=home">Home</a>``` html tags and a ```<a href="index.php?page=about">About</a>```.
 
 What it means that we can traverse the website via this **index.php?page=xyz**
 
@@ -52,4 +52,4 @@ In this case, its [Local file inclusion](https://owasp.org/www-project-web-secur
 curl --user  natas7:$(cat natas7 ) $URL"/index.php?page=/etc/natas_webpass/natas8"
 ```
 
-I get the password and on to the next challange.
+I get the password and on to the next challenge.

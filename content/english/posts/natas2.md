@@ -13,9 +13,9 @@ tags:
 ---
 
 
-That was the first natas wargame where it didn't get solved in the first second. 
+That was the first Natas wargame where I didn't solved it in the first second. 
 I noticed that body contained an image **/files/pixel.png**. At first I tried **file** / **strings** / **xxd** commands to find the password hidden in the image, but that led me to a dead end.
-Then I thought files/ is there anything else in that directory that could be useful?  
+Then I thought files/ - is there anything else in that directory that could be useful?  
 
 Yup, I found users.txt file with usernames:passwords and here was natas3. 
 

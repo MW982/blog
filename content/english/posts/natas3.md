@@ -17,7 +17,7 @@ The hint:
 <!-- No more information leaks!! Not even Google will find it this time... -->
 ```
 
-I completely randomly tried to check the robots.txt file... 
+I randomly decided to check the robots.txt file... 
 
 ```bash
 URL=http://natas3.natas.labs.overthewire.org
@@ -26,7 +26,7 @@ curl --user natas3:$(cat natas3) $URL"/robots.txt"
 ```
 
 There I found /s3cr3t/ which then led me to the /s3cr3t/users.txt file with the password for natas4.
-In the hindsight I get it "Not even Google" web crawlers will find it. Robots.txt is a informational file for web crawlers to see what they should index or not...
+In the hindsight I get it "Not even Google" web crawlers will find it. Robots.txt is an informational file for web crawlers to see what they should index or not...
 
 
 ```bash
