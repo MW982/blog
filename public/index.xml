@@ -6,8 +6,15 @@
     <description>Recent content on Maksymilian Więckowski - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Mar 2026 18:37:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 10:10:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Over the wire - Natas9</title>
+      <link>http://localhost:1313/posts/natas9/</link>
+      <pubDate>Sat, 14 Mar 2026 10:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas9/</guid>
+      <description>This one is pretty cool. Usual start followed by looking at the source code.&#xA;URL=http://natas9.natas.labs.overthewire.org curl --user natas9:$(cat natas9 ) $URL curl --user natas9:$(cat natas9 ) $URL&amp;#34;/index-source.html&amp;#34; I parsed the file &amp;ldquo;index-source.html&amp;rdquo; like in the previous challenge and here it is:&#xA;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- This stuff in the header has nothing to do with the level --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;http://natas.labs.overthewire.org/css/level.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;http://natas.labs.overthewire.org/css/jquery-ui.css&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;http://natas.labs.overthewire.org/css/wechall.css&amp;#34; /&amp;gt; &amp;lt;script src=&amp;#34;http://natas.</description>
+    </item>
     <item>
       <title>Over the wire - Natas8</title>
       <link>http://localhost:1313/posts/natas8/</link>
