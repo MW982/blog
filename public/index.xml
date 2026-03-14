@@ -6,8 +6,22 @@
     <description>Recent content on Maksymilian Więckowski - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Mar 2026 10:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 12:11:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Over the wire - Natas11</title>
+      <link>http://localhost:1313/posts/natas11/</link>
+      <pubDate>Sat, 14 Mar 2026 12:11:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Over the wire - Natas10</title>
+      <link>http://localhost:1313/posts/natas10/</link>
+      <pubDate>Sat, 14 Mar 2026 11:11:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/natas10/</guid>
+      <description>This one is the same as Natas9, but with a small &amp;ldquo;roadblock&amp;rdquo;.&#xA;Let&amp;rsquo;s check what do we have:&#xA;URL=http://natas10.natas.labs.overthewire.org curl --user natas10:$(cat natas10 ) $URL curl --user natas10:$(cat natas10 ) $URL&amp;#34;/index-source.html&amp;#34; Just gonna show you the important part:&#xA;Output: &amp;lt;pre&amp;gt; &amp;lt;? $key = &amp;#34;&amp;#34;; if(array_key_exists(&amp;#34;needle&amp;#34;, $_REQUEST)) { $key = $_REQUEST[&amp;#34;needle&amp;#34;]; } if($key != &amp;#34;&amp;#34;) { if(preg_match(&amp;#39;/[;|&amp;amp;]/&amp;#39;,$key)) { print &amp;#34;Input contains an illegal character!&amp;#34;; } else { passthru(&amp;#34;grep -i $key dictionary.txt&amp;#34;); } } ?</description>
+    </item>
     <item>
       <title>Over the wire - Natas9</title>
       <link>http://localhost:1313/posts/natas9/</link>

